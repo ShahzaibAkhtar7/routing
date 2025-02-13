@@ -1,0 +1,56 @@
+.navbar {
+  background-color: #333; /* Dark background */
+  color: white; /* Text color */
+  padding: 1rem 0; /* Padding for the navbar */
+}
+
+.navbar-logo a {
+  color: white; /* Logo link color */
+  font-size: 1.5rem; /* Logo font size */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-menu {
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-menu li {
+  margin: 0 1rem; /* Space between menu items */
+}
+
+.navbar-link {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar-link:hover {
+  color: #f0a500; /* Change color on hover */
+}
+
+.navbar-mobile-menu {
+  display: none; /* Hide mobile menu by default */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Positioning for dropdown */
+    top: 60px; /* Position below navbar */
+    left: 0; /* Align to the left */
+    background-color: #333; /* Background color for dropdown */
+    width: 100%; /* Full width */
+  }
+
+  .navbar-menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .navbar-mobile-menu {
+    display: block; /* Show mobile menu icon */
+  }
+}
